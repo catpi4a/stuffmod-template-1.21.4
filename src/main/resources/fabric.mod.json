@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "stuffmod",
+	"version": "${version}",
+	"name": "stuffmod",
+	"description": "this is a mod",
+	"authors": [
+		"a person"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/stuffmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.hidk.stuffmod.Stuffmod"
+		],
+		"fabric-datagen": [
+			"net.hidk.stuffmod.StuffmodDataGenerator"
+		],
+		"client": [
+			"net.hidk.stuffmod.StuffModClient"
+		]
+	},
+	"mixins": [
+		"stuffmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
